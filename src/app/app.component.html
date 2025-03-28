@@ -1,0 +1,16 @@
+<div class="chat-container">
+  <div class="header">
+    <h4>Chat App</h4>
+  </div>
+  <div class="chat-box">
+    <div class="messages">
+      <div *ngFor="let msg of messages" class="message">
+        <div class="message-text">{{ msg }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="input-area">
+    <input [(ngModel)]="message" placeholder="Type a message..." (keyup.enter)="sendMessage()" />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>
